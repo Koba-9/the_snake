@@ -41,6 +41,7 @@ clock = pygame.time.Clock()
 
 class GameObject:
     """Базовый класс, от которого наследуются другие игровые объекты"""
+
     def __init__(self):
         self.position = ((SCREEN_WIDTH // 2), (SCREEN_HEIGHT // 2))
         self.body_color = None
@@ -55,7 +56,7 @@ class GameObject:
 
     def draw(self):
         """
-        Абстрактный метод, который будет определять, 
+        Абстрактный метод, который будет определять,
         как объект будет отрисовываться на экране
         """
         pass
@@ -63,6 +64,7 @@ class GameObject:
 
 class Snake(GameObject):
     """Класс, описывающий змейку и её поведение"""
+
     def __init__(self):
         super().__init__()
         self.reset()
@@ -124,6 +126,7 @@ class Snake(GameObject):
 
 class Apple(GameObject):
     """Класс, описывающий яблоко и действия с ним"""
+    
     def __init__(self, snake_positions=None):
         super().__init__()
         self.body_color = APPLE_COLOR
@@ -148,7 +151,7 @@ class Apple(GameObject):
 
 def handle_keys(game_object):
     """
-    Обрабатывает нажатия клавиш, 
+    Обрабатывает нажатия клавиш,
     чтобы изменить направление движения змейки
     """
     for event in pygame.event.get():
