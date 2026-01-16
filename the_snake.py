@@ -1,5 +1,6 @@
 from random import randint
-from typing import Tuple, List, Optional
+from typing import List, Tuple, Optional
+
 import pygame
 
 # Константы для размеров поля и сетки:
