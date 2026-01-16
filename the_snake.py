@@ -1,5 +1,4 @@
 from random import randint
-
 from typing import Tuple, List, Optional
 
 import pygame
@@ -49,7 +48,8 @@ class GameObject:
         self.body_color = None
 
     def draw_cell(
-        self, position: Tuple[int, int],
+        self,
+        position: Tuple[int, int],
         color: Optional[Tuple[int, int, int]] = None
     ) -> None:
         """Отрисовка ячейки"""
