@@ -1,7 +1,7 @@
 from random import randint
 from typing import List, Optional, Tuple
 
-import pygame # type: ignore
+import pygame  # type: ignore
 
 # Константы для размеров поля и сетки:
 SCREEN_WIDTH, SCREEN_HEIGHT = 640, 480
