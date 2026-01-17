@@ -123,11 +123,6 @@ class Snake(GameObject):
         """Увеличивает длину змейки"""
         self.length += 1
 
-    def check_collision(self) -> bool:
-        """Столкновение змейки со своим же телом"""
-        head = self.get_head_position()
-        return head in self.positions[1:]
-
 
 class Apple(GameObject):
     """Класс, описывающий яблоко и действия с ним"""
@@ -190,7 +185,7 @@ def main() -> None:
         handle_keys(snake)
         snake.update_direction()
         head_position = snake.move()
-        if snake.get_head_position() in snake.positions[1:]:
+        if head_position in snake.positions[1:]:
             pygame.quit()
             break
         if head_position == apple.position:
