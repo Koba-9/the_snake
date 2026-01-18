@@ -184,7 +184,7 @@ def main() -> None:
         clock.tick(SPEED)
         handle_keys(snake)
         snake.update_direction()
-        head_position = snake.move()
+        head_position = snake.get_head_position()
         if head_position in snake.positions[1:]:
             pygame.quit()
             break
